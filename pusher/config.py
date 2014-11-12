@@ -40,8 +40,8 @@ class Config(object):
       >> c = Config('455', 'mykey', 'mysecret')
     """
     def __init__(self, app_id, key, secret, ssl=False, host=None, port=None, cluster=None):
-        if not isinstance(app_id, six.text_type):
-            raise TypeError("App ID should be %s" % text)
+        #if not isinstance(app_id, six.text_type):
+        #    raise TypeError("App ID should be %s" % text)
 
         if not isinstance(key, six.text_type):
             raise TypeError("Key should be %s" % text)
@@ -49,8 +49,8 @@ class Config(object):
         if not isinstance(secret, six.text_type):
             raise TypeError("Secret should be %s" % text)
 
-        if not app_id_re.match(app_id):
-            raise ValueError("Invalid app id")
+        # if not app_id_re.match(app_id):
+        #     raise ValueError("Invalid app id")
 
         if port and not isinstance(port, six.integer_types):
             raise TypeError("Port should be a number")
